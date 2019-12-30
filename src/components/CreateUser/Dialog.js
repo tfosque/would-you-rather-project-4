@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Alert } from 'react-bootstrap';
+import {Alert} from 'react-bootstrap';
 
 class Dialog extends React.Component {
   state = {
@@ -17,8 +17,6 @@ class Dialog extends React.Component {
   }
 
   render() {
-    // console.log('Dialog:', this);
-
     return (
       <div className='alertDialogContainer'>
         <Alert show={this.state.show} variant='warning' dismissible>
