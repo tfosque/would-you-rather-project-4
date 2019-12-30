@@ -24,8 +24,10 @@
 // DONE: check after adding a new poll
 // DONE: two clicks on details breaks styles
 // DONE: show details on redirect (only details from users unanswered obj) !Important
- // DONE: isValid  (only details from users unanswered obj) !Important
- // TBD: should logout clear redux?
+// DONE: isValid  (only details from users unanswered obj) !Important
+// TBD: should logout clear redux?
+
+// TODO: error page detect bad url
 
 // NEXTVERSION: Next Steps
 // Restructure UI and Data Flow to consistently flow in one direction and is predictable
