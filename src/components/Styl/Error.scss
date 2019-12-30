@@ -1,0 +1,29 @@
+.errorContainer {
+  text-align: center;
+}
+
+.top {
+  background: #7c7c84;
+  width: 100%;
+  margin-top: 40px;
+
+  div .h2 {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(148, 30, 30);
+    font-size: 10em;
+    height: 186px;
+    margin: 0px;
+    padding: 0;
+  }
+}
+
+.bottom {
+  background: #35353a;
+  height: auto;
+  width: 100%;
+
+  div>h5 {
+    font-size: 2em;
+    padding: 20px;
+  }
+}

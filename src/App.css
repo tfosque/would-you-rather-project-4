@@ -1,0 +1,52 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  background: #292929;
+  /* overflow: hidden; */
+}
+
+h1.header1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.5em;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(51, 51, 51);
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 38px;
+}
+
+.col-lg-3 {
+  height: 100px;
+}
+
+.footer {
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #1b1b1b70;
+  color: white;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.footer div {
+  /*  background: #292929; */
+  width: 100%;
+  height: 56px;
+}
+
+.footer div a {
+  display: block;
+  margin-top: -38px;
+  font-size: .9em;
+}

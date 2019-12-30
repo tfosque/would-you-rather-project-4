@@ -1,0 +1,34 @@
+.leaderBoardAvatar {
+  padding: 0;
+  margin: 0;
+  top: -86px;
+  left: -18px;
+  position: relative;
+}
+
+.avatarImage {
+  z-index: 2000;
+  position: relative;
+  top: 73px;
+  left: 11px;
+}
+
+.circleGenericAvatarWrapper {
+  color: #292929;
+  font-size: 1.575em;
+  position: relative;
+  top: -160px;
+  z-index: 100;
+  width: 64px;
+  height: 70px;
+  margin-left: 359px;
+
+  h5 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: bolder;
+    position: relative;
+    top: -53px;
+    left: 13px;
+  }
+}

@@ -1,0 +1,27 @@
+.leaderBoardContainer {
+  color: #fff;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 82px;
+  display: block;
+
+  .index {
+    text-align: left;
+    padding-left: 26px;
+  }
+
+  .badge {
+    border-radius: 50%;
+    font-size: 1.225em;
+    left: -20px;
+    top: 40px;
+    z-index: 3000;
+    position: relative;
+  }
+}
+
+.questions.col-lg-3 span {
+  color: orange;
+  font-size: 1.25em;
+  font-weight: bold;
+}

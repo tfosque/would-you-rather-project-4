@@ -1,0 +1,11 @@
+.toastAlertWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toast {
+    min-width: 425px;
+    max-width: 500px;
+    margin: 0;
+  }
+}

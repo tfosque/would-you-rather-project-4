@@ -1,0 +1,28 @@
+.loginContainer {
+  margin: auto;
+  width: 400px;
+}
+
+.login {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 0px 0px 20px 20px;
+  margin: 20px;
+  background: rgb(51, 50, 50);
+}
+
+legend {
+  color: white;
+  padding: 8px 0px;
+  text-align: left;
+}
+
+p {
+  color: rgb(158, 149, 149);
+}
+
+#appSelect {
+  width: 280px;
+}

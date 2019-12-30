@@ -1,0 +1,99 @@
+.circleIconWrapperLarge {
+  position: relative;
+  z-index: 100;
+  color: #fff;
+  top: 0px;
+  left: 122px;
+  font-size: 22px;
+  margin-left: -198px;
+  margin-bottom: -146px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    position: relative;
+    z-index: 100000;
+    left: -72px;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.circleIconWrapperMedium {
+  position: relative;
+  z-index: 80000;
+  color: #fff;
+  top: -30px;
+  left: 122px;
+  font-size: 20px;
+  margin-left: -198px;
+  margin-bottom: -59px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    display: block;
+    position: relative;
+    z-index: 100000;
+    left: -42px;
+    top: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+.circleIconLarge {
+  color: #292929;
+}
+
+.circleIconMedium {
+  color: #292929;
+}
+
+.circleGenericWrapper {
+  color: #292929;
+  font-size: 1.575em;
+  position: relative;
+  top: -160px;
+  z-index: 100;
+  width: 64px;
+  height: 70px;
+  margin-left: 359px;
+
+  h5 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: bolder;
+    position: relative;
+    top: -53px;
+    left: 13px;
+  }
+}
+
+.circleAvatar {
+  text-align: center;
+  height: 80px;
+
+  img {
+    position: relative;
+    top: -9px;
+    left: 47px;
+    z-index: 1000;
+  }
+
+  span.circleIconAvatar {
+    text-align: center;
+    color: #292929;
+    position: relative;
+    top: 30px;
+    left: -45px;
+    z-index: 0;
+    font-size: 7.55em;
+  }
+}
