@@ -76,4 +76,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-Preview this application deployed at [netlilfy](https://would-u-rather-tfosque.netlify.com/), ( https://would-u-rather-tfosque.netlify.com/ ).
+Preview this application deployed at [netlilfy](https://would-u-rather-4-tfosque.netlify.com/), ( https://would-u-rather-4-tfosque.netlify.com/ ).
