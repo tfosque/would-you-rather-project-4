@@ -1,32 +1,40 @@
-import React, { Component } from 'react'
-import { withRouter, Redirect } from 'react-router'
-// import { size } from 'lodash'
-import { connect } from 'react-redux'
-import { createAlert } from '../../Redux/Store/Actions/questionsAction'
+import React, {Component} from 'react';
+import {withRouter, Redirect} from 'react-router';
+import {connect} from 'react-redux';
+import {createAlert} from '../../Redux/Store/Actions/questionsAction';
 
-import { Polls } from './'
+import {Polls} from './';
 
 class PollsContainer extends Component {
   state = {
-    users: {}
-  }
+    users: {},
+  };
 
-  render () {
+  render() {
     // console.log('PollsContainer:', this.props)
 
     const {
-      userLoggedIn: { id }
-    } = this.props
+      userLoggedIn: {id},
+    } = this.props;
 
-    // FROM:
-    return <div>{ id === null ? <Redirect to={ {
-      pathname: '/login',
-      state: { from: this.props.location }
-    } } /> : <Polls /> }</div>
+    return (
+      <div>
+        {id === null ? (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: {from: this.props.location},
+            }}
+          />
+        ) : (
+          <Polls />
+        )}
+      </div>
+    );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     user: state.users.user,
     users: state.users.users,
@@ -34,9 +42,9 @@ const mapStateToProps = state => {
     userLoggedIn: state.users.userLoggedIn,
     category: state.menu.category,
     usersPolls: state.questions.usersPolls,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, { createAlert })(
-  withRouter(PollsContainer)
-)
+export default connect(mapStateToProps, {createAlert})(
+  withRouter(PollsContainer),
+);

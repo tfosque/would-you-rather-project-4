@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { isEmpty } from 'lodash';
-import { connect } from 'react-redux';
-import { createUser } from '../../Redux/Store/Actions/usersAction';
-import { createAlert } from '../../Redux/Store/Actions/questionsAction';
-import { Form, Button, Alert } from 'react-bootstrap';
+import React, {Component} from 'react';
+import {isEmpty} from 'lodash';
+import {connect} from 'react-redux';
+import {createUser} from '../../Redux/Store/Actions/usersAction';
+import {createAlert} from '../../Redux/Store/Actions/questionsAction';
+import {Form, Button, Alert} from 'react-bootstrap';
 
 class NewUserForm extends Component {
   state = {
@@ -27,7 +27,7 @@ class NewUserForm extends Component {
   };
 
   handleSubmit = (e) => {
-    this.setState({ submitted: true })
+    this.setState({submitted: true});
     e.preventDefault();
     if (this.state.fname !== '' && this.state.lname !== '') {
       this.props.createUser(this.formatUser());
@@ -42,46 +42,55 @@ class NewUserForm extends Component {
     this.setState({
       disable: isEmpty(this.state.fname) || isEmpty(this.state.lname),
     });
-
-    // next version will check for duplicate players and createMessage
   };
 
   formatUser = () => {
-    const { fname, lname } = this.state;
+    const {fname, lname} = this.state;
 
     let user;
     let id = (this.state.fname + this.state.lname).toLowerCase();
 
     user = {
       id,
-      name: `${ fname } ${ lname }`,
+      name: `${fname} ${lname}`,
       questions: [],
       answers: [],
     };
 
     setTimeout(() => {
-      this.props.onClose()
+      this.props.onClose();
     }, 1500);
 
     return user;
   };
 
-  render () {
-
+  render() {
     const Success = () => {
-      return <div>{ this.state.submitted ? <small><Alert variant='success' style={ { height: 46 } }><p style={ { color: 'green' } }>'Player was successfully created'</p></Alert></small> : null }</div>
-    }
+      return (
+        <div>
+          {this.state.submitted ? (
+            <small>
+              <Alert variant='success' style={{height: 46}}>
+                <p style={{color: 'green'}}>
+                  'Player was successfully created'
+                </p>
+              </Alert>
+            </small>
+          ) : null}
+        </div>
+      );
+    };
 
     return (
       <div>
-        <Form onKeyUp={ this.handleKeyUp }>
+        <Form onKeyUp={this.handleKeyUp}>
           <Form.Group controlId='formFirstName'>
             <Form.Label>First name</Form.Label>
             <Form.Control
               htmlFor='fname'
               type='text'
               placeholder='First name'
-              onChange={ this.handleFname }
+              onChange={this.handleFname}
               maxLength='8'
               required
             />
@@ -96,7 +105,7 @@ class NewUserForm extends Component {
               htmlFor='lname'
               type='text'
               placeholder='Last name'
-              onChange={ this.handleLname }
+              onChange={this.handleLname}
               maxLength='8'
               required
             />
@@ -107,11 +116,11 @@ class NewUserForm extends Component {
           <Success />
 
           <Button
-            onClick={ this.handleSubmit }
+            onClick={this.handleSubmit}
             type='button'
-            variant={ this.state.disable ? 'secondary' : 'success' }
-            disabled={ this.state.disable }
-            style={ { float: 'right' } }
+            variant={this.state.disable ? 'secondary' : 'success'}
+            disabled={this.state.disable}
+            style={{float: 'right'}}
           >
             Create Player
           </Button>
@@ -124,8 +133,8 @@ class NewUserForm extends Component {
 const mapStateToProps = (state) => {
   return {
     users: state.users.users,
-    userLoggedIn: state.users.userLoggedIn
+    userLoggedIn: state.users.userLoggedIn,
   };
 };
 
-export default connect(mapStateToProps, { createUser, createAlert })(NewUserForm);
+export default connect(mapStateToProps, {createUser, createAlert})(NewUserForm);
