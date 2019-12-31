@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+# text
 *.txt
 
 # testing
@@ -14,8 +15,6 @@
 *.test
 
 *-copy.js
-
-
 
 # production
 /build
