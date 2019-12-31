@@ -33,7 +33,8 @@ class PollPanel extends Component {
     e.preventDefault();
     e.persist();
 
-    if (this.props.showPollDetails) {
+    if (this.props.showPollDetails || this.props.category === '/answered') {
+      console.log(this.props.showPollDetails);
       return null;
     }
 
@@ -63,7 +64,7 @@ class PollPanel extends Component {
       } else {
         this.props.setShowPollDetails(true);
       }
-    }, 500);
+    }, 0);
   };
 
   render() {
@@ -75,23 +76,13 @@ class PollPanel extends Component {
       usersPollQuestions,
     } = this.props;
 
-    // console.log('PollPanel:', this.props);
-
     const questionPath = `/question/${pollQuestion.id}`;
 
     let defaultStyles;
     const useRedirectOption =
-      typeof redirectOption !== 'undefined' ? redirectOption.option : {}; // sessionStorage.getItem('myRedirect')
-
-    // selection
-    // if category = answered
-    // find users answers, filter for currQuestion
-
-    // myPolls votes
-    // const targetPoll = pollQuestion; // pollQuestion[ pollQuestion.option ]
+      typeof redirectOption !== 'undefined' ? redirectOption.option : {};
 
     if (!showPollDetails && !useRedirectOption) {
-      console.log('if: 02');
       defaultStyles = 'omitSelection';
     }
     if (selectedPollOption === pollQuestion.option && !showPollDetails) {
